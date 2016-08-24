@@ -9,7 +9,7 @@ const logger = require('morgan'); // clean logs
 const errorHandler = require('errorhandler');
 const lusca = require('lusca'); // app security
 const dotenv = require('dotenv'); // env variable handling
-const MongoStore = require('connect-mongo')(session); // mongo session storage
+const MongoStore = require('connect-mongo')(session); // mongo sessions
 const flash = require('express-flash'); // flash messaging
 const path = require('path'); // file and dir path handling
 const mongoose = require('mongoose'); // mongo connector
@@ -17,6 +17,7 @@ const passport = require('passport'); // nodejs authentication
 const expressValidator = require('express-validator'); // sanitizer
 const sass = require('node-sass-middleware'); // recompile sass or scss
 const multer = require('multer'); // multipart form handling
+const consolidate = require('consolidate'); // allow 1+ template engines
 const upload = multer({ dest: path.join(__dirname, 'uploads') }); 
 
 /**
