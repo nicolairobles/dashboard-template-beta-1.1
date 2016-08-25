@@ -1,0 +1,120 @@
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+
+  // PAGE BEFORE
+
+  // jQuery for left-hand nav link
+  var ratings_link = $(".navi ul.nav li#no-icon-page.ratings_link");
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).ratings_link=="true" ) {
+      ratings_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav link gets a new class
+  $("a.btn-success#ratings_arrow").on("click", function(){
+      console.log("test if arrow clicked");
+      ratings_link.addClass("link-clicked");
+      console.log("class added")
+    });
+
+
+
+  // PAGE AFTER
+
+  // jQuery for left-hand nav link
+  var what_type_of_media_do_you_interact_with_link = $(".navi ul.nav li#icon-page.what_type_of_media_do_you_interact_with_link")
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).what_type_of_media_do_you_interact_with_link=="true" ) {
+      what_type_of_media_do_you_interact_with_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav gets a new class
+    $("a.btn-success#type_of_media_arrow").on("click", function(){
+      what_type_of_media_do_you_interact_with_link.addClass("link-clicked");
+    });
+
+
+});
+
+
+
+</script>  
+
+<div class="hbox hbox-auto-xs hbox-auto-sm">
+  
+  <div class="col">
+    <div class="clearfix padder-md">
+
+      <!-- custom url modal -->
+      <a ui-sref="app.intro_review.tldr" class="btn btn-success" ng-click="app.click_history.intro_review_modal_link = 'true';" class="intro_review_link">TLDR</a>
+
+
+      <!-- page content -->
+      <p>
+        Let's see what you've learned before we move on
+      </p>
+
+      <!-- game functionality -->
+      <div class="wrapper-md">
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+
+              <!-- Game Box -->
+              <div ng-controller="ProgressDemoCtrl" class="panel panel-default">
+
+                <div class="panel-heading">
+                  Overview
+                </div>
+
+                <div class="list-group">
+                  <div class="container">
+                      <h1 class="title"></h1>
+                      <!-- Angular Directive: Quiz -->
+                      <quiz/>
+                  </div>
+                  <br>
+                </div>
+
+              </div>
+              <!-- / Game box -->
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+
+
+
+      <div class="arrowWrap">
+        <ul class="arrows">
+        <!-- Customize by changing 
+        (1) ui-sref 
+        (2) ng-click="app.click_history.<appropriate link>" 
+        (3) class, and 
+        (4) id -->
+        
+        <!-- Page Before Arrow -->
+          <li><a ui-sref="app.ratings" ng-click="app.click_history.ratings_link = 'true';" class="ratings_link" id="ratings_arrow"><i class="fa fa-play fa-rotate-180"></i></a></li>
+        
+        <!-- Page After Arrow -->
+          <li><a ui-sref="app.what_type_of_media_do_you_interact_with" ng-click="app.click_history.what_type_of_media_do_you_interact_with_link = 'true';" class="what_type_of_media_do_you_interact_with_link" id="type_of_media_arrow"><i class="fa fa-play"></i></a></li>
+        </ul>
+      </div>
+
+
+
+
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

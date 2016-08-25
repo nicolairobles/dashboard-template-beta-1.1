@@ -1,0 +1,487 @@
+<!-- Temporary Script to apply styles to respond to variables stored in localStorage.click_history -->
+<!-- TODO: create angular directive to handle this efficiently -->
+
+<script type="text/javascript">
+  // Declare variables for easy use
+    var page1_link = $(".navi ul.nav li#no-icon-page.page1_link")
+    var page2_link = $(".navi ul.nav li#no-icon-page.page2_link")
+    var page3_link = $(".navi ul.nav li#no-icon-page.page3_link")
+    var page4_link = $(".navi ul.nav li#icon-page.page4_link")
+    var the_basics_link = $(".navi ul.nav li#no-icon-page.the_basics_link")
+    var big_data_link = $(".navi ul.nav li#no-icon-page.big_data_link")
+    var ratings_link = $(".navi ul.nav li#no-icon-page.ratings_link")
+    var intro_review_link = $(".navi ul.nav li#icon-page.intro_review_link")
+    var what_type_of_media_do_you_interact_with_link = $(".navi ul.nav li#icon-page.what_type_of_media_do_you_interact_with_link")
+    var what_form_does_media_take_link = $(".navi ul.nav li#icon-page.what_form_does_media_take_link")
+    var how_do_you_consume_media_link = $(".navi ul.nav li#no-icon-page.how_do_you_consume_media_link")
+    var who_are_the_key_players_in_the_media_industry_link = $(".navi ul.nav li#no-icon-page.who_are_the_key_players_in_the_media_industry_link")
+    var overview_link = $(".navi ul.nav li#icon-page.overview_link")
+    var what_comes_after_measurement_link = $(".navi ul.nav li#no-icon-page.what_comes_after_measurement_link")
+    var the_most_well_known_metric_link = $(".navi ul.nav li#no-icon-page.the_most_well_known_metric_link")
+    var ratings_questions_link = $(".navi ul.nav li#no-icon-page.ratings_questions_link")
+    var primary_playback_link = $(".navi ul.nav li#icon-page.primary_playback_link")
+    var our_hybrid_approach_link = $(".navi ul.nav li#no-icon-page.our_hybrid_approach_link")
+    var panels_link = $(".navi ul.nav li#no-icon-page.panels_link")
+
+   // Add link-clicked class if in localStorage
+
+    // page 1
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).page1_link=="true" ) {
+      page1_link.addClass("link-clicked");
+    }  
+    // page 2
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).page2_link=="true" ) {
+      page2_link.addClass("link-clicked");
+    }
+    // page 3
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).page3_link=="true" ) {
+      page3_link.addClass("link-clicked");
+    }
+    // page 4
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).page4_link=="true" ) {
+      page4_link.addClass("link-clicked");
+    }
+    // the_basics page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).the_basics_link=="true" ) {
+      the_basics_link.addClass("link-clicked");
+    }
+     // big_data page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).big_data_link=="true" ) {
+      big_data_link.addClass("link-clicked");
+    }
+    // ratings page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).ratings_link=="true" ) {
+      ratings_link.addClass("link-clicked");
+    }
+    // intro_review page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).intro_review_link=="true" ) {
+      intro_review_link.addClass("link-clicked");
+    }
+
+    // what_type_of_media_do_you_interact_with_link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).what_type_of_media_do_you_interact_with_link=="true" ) {
+      what_type_of_media_do_you_interact_with_link.addClass("link-clicked");
+    }
+
+    // what_form_does_media_take_link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).what_form_does_media_take_link=="true" ) {
+      what_form_does_media_take_link.addClass("link-clicked");
+    }
+
+    // how_do_you_consume_media link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).how_do_you_consume_media_link=="true" ) {
+      how_do_you_consume_media_link.addClass("link-clicked");
+    }
+
+    // who_are_the_key_players_in_the_media_industry link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).who_are_the_key_players_in_the_media_industry_link=="true" ) {
+      who_are_the_key_players_in_the_media_industry_link.addClass("link-clicked");
+    }
+
+    // overlay link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).overview_link=="true" ) {
+      overview_link.addClass("link-clicked");
+    }
+
+      // what_comes_after_measurement link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).what_comes_after_measurement_link=="true" ) {
+      what_comes_after_measurement_link.addClass("link-clicked");
+    }
+      // the_most_well_known_metric link page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).the_most_well_known_metric_link=="true" ) {
+      the_most_well_known_metric_link.addClass("link-clicked");
+    }
+
+    // ratings_questions page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).ratings_questions_link=="true" ) {
+      ratings_questions_link.addClass("link-clicked");
+    }
+
+    // primary_playback page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).primary_playback_link=="true" ) {
+      primary_playback_link.addClass("link-clicked");
+    }
+
+    // our_hybrid_approach page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).our_hybrid_approach_link=="true" ) {
+      our_hybrid_approach_link.addClass("link-clicked");
+    }
+
+    // panels page
+    if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).panels_link=="true" ) {
+      panels_link.addClass("link-clicked");
+    }
+
+
+    
+
+
+
+
+  // Add link-clicked class immediately on click
+
+    // page 1
+    page1_link.on("click", function(){
+      page1_link.addClass("link-clicked");
+    });
+    // page 2
+    page2_link.on("click", function(){
+      page2_link.addClass("link-clicked");
+    });
+    // page 3
+    page3_link.on("click", function(){
+      page3_link.addClass("link-clicked");
+    });
+    // page 4
+    page4_link.on("click", function(){
+      page4_link.addClass("link-clicked");
+    });
+    // the_basics page
+    the_basics_link.on("click", function(){
+      the_basics_link.addClass("link-clicked");
+    });
+
+     // big_data page
+    big_data_link.on("click", function(){
+      big_data_link.addClass("link-clicked");
+    });
+
+     // ratings page
+    ratings_link.on("click", function(){
+      ratings_link.addClass("link-clicked");
+    });
+
+     // intro_review page
+    intro_review_link.on("click", function(){
+      intro_review_link.addClass("link-clicked");
+    });
+
+    // what_type_of_media_do_you_interact_with page
+    what_type_of_media_do_you_interact_with_link.on("click", function(){
+      what_type_of_media_do_you_interact_with_link.addClass("link-clicked");
+    });
+
+      // what_form_does_media_take page
+    what_form_does_media_take_link.on("click", function(){
+      what_form_does_media_take_link.addClass("link-clicked");
+    });
+
+    // how_do_you_consume_media page
+    how_do_you_consume_media_link.on("click", function(){
+      how_do_you_consume_media_link.addClass("link-clicked");
+    });
+
+    // who_are_the_key_players_in_the_media_industry page
+    who_are_the_key_players_in_the_media_industry_link.on("click", function(){
+      who_are_the_key_players_in_the_media_industry_link.addClass("link-clicked");
+    });
+
+     // overview
+    overview_link.on("click", function(){
+      overview_link.addClass("link-clicked");
+    });
+
+    // what_comes_after_measurement
+    what_comes_after_measurement_link.on("click", function(){
+      what_comes_after_measurement_link.addClass("link-clicked");
+    });
+
+    // the_most_well_known_metric
+    the_most_well_known_metric_link.on("click", function(){
+      the_most_well_known_metric_link.addClass("link-clicked");
+    });
+
+    // ratings_questions
+    ratings_questions_link.on("click", function(){
+      ratings_questions_link.addClass("link-clicked");
+    });
+
+    // primary_playback
+    primary_playback_link.on("click", function(){
+      primary_playback_link.addClass("link-clicked");
+    });
+
+    // our_hybrid_approach
+    our_hybrid_approach_link.on("click", function(){
+      our_hybrid_approach_link.addClass("link-clicked");
+    });
+
+    // panels
+    panels_link.on("click", function(){
+      panels_link.addClass("link-clicked");
+    });
+
+
+
+
+
+
+    
+
+
+
+
+
+  
+</script>                                         
+<!-- navigation bar page titles -->
+<ul class="nav" id="module-nav">
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>Introduction</span>
+  </li>
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.the_basics_link = 'true';" class="the_basics_link">
+      <a ui-sref="app.the_basics">
+        <i class=""></i>
+        <span>The Basics</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.big_data_link = 'true';" class="big_data_link">
+      <a ui-sref="app.big_data">
+        <i class=""></i>
+        <span>Big Data</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.ratings_link = 'true';" class="ratings_link">
+      <a ui-sref="app.ratings">
+        <i class=""></i>
+        <span>Ratings</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" id="icon-page" ng-click="app.click_history.intro_review_link = 'true';" class="intro_review_link">
+      <a ui-sref="app.intro_review">
+        <i class="glyphicon glyphicon-star-empty"></i>
+        <span>Review</span>
+      </a>
+    </li>
+<!--     <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.page1_link = 'true';" class="page1_link">
+      <a ui-sref="app.page_template1">
+        <i class=""></i>
+        <span>Page 1</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.page2_link = 'true';" class="page2_link">
+      <a ui-sref="app.page_template2">
+        <i class=""></i>
+        <span>Page 2</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.page3_link = 'true';" class="page3_link">
+      <a ui-sref="app.page_template3">
+        <i class=""></i>
+        <span>Page 3</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" id="icon-page" ng-click="app.click_history.page4_link = 'true';" class="page4_link">
+      <a ui-sref="app.page_template4">
+        <i class="glyphicon glyphicon-star-empty"></i>
+        <span>Page 4</span>
+      </a>
+    </li> -->
+
+    <!-- Header Black/Bg White/Aside Bg Black -->
+      <label class="i-checks block m-b-sm" ng-click="
+        app.settings.navbarHeaderColor='bg-black'; 
+        app.settings.navbarCollapseColor='bg-white-only'; 
+        app.settings.asideColor='bg-black';
+       ">
+        <input type="radio" name="a" ng-model="app.settings.themeID" value="1">
+        <span class="block bg-light clearfix pos-rlt">
+          <span class="active pos-abt w-full h-full bg-black-opacity text-center">
+            <i class="glyphicon glyphicon-ok text-white m-t-xs"></i>
+          </span>
+          <b class="bg-black header"></b>
+          <b class="bg-white header"></b>
+          <b class="bg-black"></b>
+        </span>
+      </label>
+    <!-- Header Black/Bg White/Aside Bg Black -->
+
+
+  <li>
+    <!-- <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
+    </a> -->
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v1">
+          <span>Dashboard v1</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v2">
+          <b class="label bg-info pull-right">N</b>
+          <span>Dashboard v2</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+<!--   <li ui-sref-active="active">
+    <a ui-sref="app.calendar">
+      <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+      <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
+    </a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.mail.list">
+      <b class="badge bg-info pull-right">9</b>
+      <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+      <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
+    </a>
+  </li> -->
+  <li>
+<!--     <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-success"></i>
+      <span class="font-bold">Apps</span>
+    </a> -->
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span>Apps</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.todo">
+          <span>Todo</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="apps.note">
+          <span>Note</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="apps.contact">
+          <span>Contacts</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.weather">
+          <span>Weather</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="line dk"></li>
+
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>Key Terminology</span>
+  </li>
+
+  <li ui-sref-active="active" id="icon-page" ng-click="app.click_history.what_type_of_media_do_you_interact_with_link = 'true';" class="what_type_of_media_do_you_interact_with_link">
+      <a ui-sref="app.what_type_of_media_do_you_interact_with">
+        <i class="glyphicon glyphicon-star-empty"></i>
+        <span>What type of media do you interact with?</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="icon-page" ng-click="app.click_history.what_form_does_media_take_link = 'true';" class="what_form_does_media_take_link">
+      <a ui-sref="app.what_form_does_media_take">
+        <i class="glyphicon glyphicon-star-empty"></i>
+        <span>What form does media take?</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.how_do_you_consume_media_link = 'true';" class="how_do_you_consume_media_link">
+      <a ui-sref="app.how_do_you_consume_media">
+        <i class=""></i>
+        <span>How do you consume media?</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.who_are_the_key_players_in_the_media_industry_link = 'true';" class="who_are_the_key_players_in_the_media_industry_link">
+      <a ui-sref="app.who_are_the_key_players_in_the_media_industry">
+        <i class=""></i>
+        <span>Who are the key players in the media industry?</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="icon-page" ng-click="app.click_history.overview_link = 'true';" class="overview_link">
+      <a ui-sref="app.overview">
+        <i class="glyphicon glyphicon-star-empty"></i>
+        <span>Overview</span>
+      </a>
+    </li>
+
+  <li class="line dk"></li>
+
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+    <span>More about ratings</span>
+  </li>  
+  <li>
+
+  <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.what_comes_after_measurement_link = 'true';" class="what_comes_after_measurement_link">
+      <a ui-sref="app.what_comes_after_measurement">
+        <i class=""></i>
+        <span>What comes after measurement?</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.the_most_well_known_metric_link = 'true';" class="the_most_well_known_metric_link">
+      <a ui-sref="app.the_most_well_known_metric">
+        <i class=""></i>
+        <span>The most well known metric</span>
+      </a>
+    </li>
+
+
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.ratings_questions_link = 'true';" class="ratings_questions_link">
+      <a ui-sref="app.ratings_questions">
+        <i class=""></i>
+        <span>Ratings Questions</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="icon-page" ng-click="app.click_history.primary_playback_link = 'true';" class="primary_playback_link">
+      <a ui-sref="app.primary_playback">
+        <i class="glyphicon glyphicon-star-empty"></i>
+        <span>Primary Playback</span>
+      </a>
+    </li>
+
+    <li class="line dk"></li>
+
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>How ratings are calculated</span>
+  </li>
+
+  <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.our_hybrid_approach_link = 'true';" class="our_hybrid_approach_link">
+      <a ui-sref="app.our_hybrid_approach">
+        <i class=""></i>
+        <span>Our Hybrid Approach</span>
+      </a>
+    </li>
+
+    <li ui-sref-active="active" id="no-icon-page" ng-click="app.click_history.panels_link = 'true';" class="panels_link">
+      <a ui-sref="app.panels">
+        <i class=""></i>
+        <span>Panels</span>
+      </a>
+    </li>
+
+  
+
+    
+<!--     <a ui-sref="app.page.profile">
+      <i class="icon-user icon text-success-lter"></i>
+      <b class="badge bg-success pull-right">30%</b>
+      <span translate="aside.nav.your_stuff.PROFILE">Profile</span>
+    </a> -->
+  </li>
+ 
+</ul>
+<!-- / list -->

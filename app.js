@@ -1,5 +1,5 @@
 /**
- * Module dependencies.
+ * Ratings Academy dependencies.
  */
 const express = require('express'); // framework 
 const compression = require('compression'); // compression middleware
