@@ -1,3 +1,43 @@
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+
+  // PAGE BEFORE
+
+  // jQuery for left-hand nav link
+  var who_are_the_key_players_in_the_media_industry_link = $(".navi ul.nav li#no-icon-page.who_are_the_key_players_in_the_media_industry_link");
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).who_are_the_key_players_in_the_media_industry_link=="true" ) {
+      who_are_the_key_players_in_the_media_industry_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav link gets a new class
+  $("a.leftArrow").on("click", function(){
+      who_are_the_key_players_in_the_media_industry_link.addClass("link-clicked");
+      console.log("left arrow added")
+    });
+
+
+
+  // PAGE AFTER
+
+  // jQuery for left-hand nav link
+  var what_comes_after_measurement_link = $(".navi ul.nav li#no-icon-page.what_comes_after_measurement_link")
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).what_comes_after_measurement_link=="true" ) {
+      what_comes_after_measurement_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav gets a new class
+    $("a.rightArrow").on("click", function(){
+      what_comes_after_measurement_link.addClass("link-clicked");
+      console.log("right arrow added")
+    });
+});
+
+
+
+</script>
+
 
 <div class="hbox hbox-auto-xs hbox-auto-sm">
   
@@ -22,3 +62,11 @@
     </div>
   </div>
 </div>
+
+
+<div class="arrowWrap">
+        <ul class="arrows">
+          <li><a ui-sref="app.who_are_the_key_players_in_the_media_industry" class="leftArrow" ng-click="app.click_history.who_are_the_key_players_in_the_media_industry_link = 'true';" class="who_are_the_key_players_in_the_media_industry_link" id="who_are_the_key_players_in_the_media_industry_arrow"><i class="fa fa-play fa-rotate-180"></i></a></li>
+          <li><a ui-sref="app.what_comes_after_measurement" class="rightArrow" ng-click="app.click_history.what_comes_after_measurement_link = 'true';" class="what_comes_after_measurement_link" id="what_comes_after_measurement_arrow"><i class="fa fa-play"></i></a></li>
+        </ul>
+    </div>

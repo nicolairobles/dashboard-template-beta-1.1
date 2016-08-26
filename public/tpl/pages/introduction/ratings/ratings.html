@@ -1,4 +1,43 @@
 
+<script>
+$( document ).ready(function() {
+
+
+  // PAGE BEFORE
+
+  // jQuery for left-hand nav link
+  var big_data_link = $(".navi ul.nav li#no-icon-page.big_data_link");
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).big_data_link=="true" ) {
+      big_data_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav link gets a new class
+  $("a.leftArrow").on("click", function(){
+      big_data_link.addClass("link-clicked");
+      console.log("left arrow added")
+    });
+
+
+
+  // PAGE AFTER
+
+  // jQuery for left-hand nav link
+  var intro_review_link = $(".navi ul.nav li#icon-page.intro_review_link")
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).intro_review_link=="true" ) {
+      intro_review_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav gets a new class
+    $("a.rightArrow").on("click", function(){
+      intro_review_link.addClass("link-clicked");
+      console.log("right arrow added")
+    });
+});
+
+
+
+</script>
+
 <div class="hbox hbox-auto-xs hbox-auto-sm">
   
   <div class="col">
@@ -16,6 +55,16 @@
         In its most basic sense, a rating is the percentage of a specific population that was exposed to a particular piece of content or ad. Media owners and advertisers use ratings to understand the reach of specific content or ad (i.e., how many people watched, saw or heard it), which informs their advertising and marketing decisions. Nielsen provides ratings for content and advertising distributed across traditional television, digital devices and radio.
       </p>
       
+    </div>
+  </div>
+</div>
+
+
+<div class="arrowWrap">
+        <ul class="arrows">
+          <li><a ui-sref="app.big_data" class="leftArrow" ng-click="app.click_history.big_data_link = 'true';" class="big_data_link" id="big_data_arrow"><i class="fa fa-play fa-rotate-180"></i></a></li>
+          <li><a ui-sref="app.intro_review" class="rightArrow" ng-click="app.click_history.intro_review_link = 'true';" class="intro_review_link" id="intro_review_arrow"><i class="fa fa-play"></i></a></li>
+        </ul>
     </div>
   </div>
 </div>

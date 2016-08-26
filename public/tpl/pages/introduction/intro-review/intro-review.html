@@ -82,39 +82,26 @@ $( document ).ready(function() {
           <div class="col-sm-2"></div>
         </div>
       </div>
-
-
-
-
-      <div class="arrowWrap">
-        <ul class="arrows">
-        <!-- Customize by changing 
-        (1) ui-sref 
-        (2) ng-click="app.click_history.<appropriate link>" 
-        (3) class, and 
-        (4) id -->
-        
-        <!-- Page Before Arrow -->
-          <li><a ui-sref="app.ratings" ng-click="app.click_history.ratings_link = 'true';" class="ratings_link" id="ratings_arrow"><i class="fa fa-play fa-rotate-180"></i></a></li>
-        
-        <!-- Page After Arrow -->
-          <li><a ui-sref="app.what_type_of_media_do_you_interact_with" ng-click="app.click_history.what_type_of_media_do_you_interact_with_link = 'true';" class="what_type_of_media_do_you_interact_with_link" id="type_of_media_arrow"><i class="fa fa-play"></i></a></li>
-        </ul>
-      </div>
-
-
-
-
-
       
+
     </div>
   </div>
+</div>  
+
+<div class="arrowWrap">
+  <ul class="arrows">
+          <!-- Customize by changing 
+  (1) ui-sref 
+  (2) ng-click="app.click_history.<appropriate link>" 
+  (3) class, and 
+  (4) id -->
+  
+  <!-- Page Before Arrow -->
+    <li><a ui-sref="app.ratings" class="leftArrow" ng-click="app.click_history.ratings_link = 'true';" class="ratings_link" id="ratings_arrow"><i class="fa fa-play fa-rotate-180"></i></a></li>
+  <!-- Page After Arrow -->
+    <li><a ui-sref="app.what_type_of_media_do_you_interact_with" class="rightArrow" ng-click="app.click_history.what_type_of_media_do_you_interact_with_link = 'true';" class="what_type_of_media_do_you_interact_with_link" id="what_type_of_media_do_you_interact_with_arrow"><i class="fa fa-play"></i></a></li>
+  </ul>
 </div>
-
-
-
-
-
 
 
 

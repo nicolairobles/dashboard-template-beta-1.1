@@ -1,3 +1,27 @@
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+
+
+  // PAGE AFTER
+
+  // jQuery for left-hand nav link
+  var big_data_link = $(".navi ul.nav li#no-icon-page.big_data_link")
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).big_data_link=="true" ) {
+      big_data_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav gets a new class
+    $("a.rightArrow").on("click", function(){
+      big_data_link.addClass("link-clicked");
+    });
+});
+
+
+
+</script> 
+
 
 <div class="hbox hbox-auto-xs hbox-auto-sm">
   
@@ -14,18 +38,22 @@
         As a way to reference the mass communication landscape, the word “media” dates back more than 70 years. Today, the term is much broader, expanding well beyond the realm of advertising and communications, as technology has made media an integral part of consumers’ lives—from traditional TV to on-the- go mobile consumption to radio to the internet to over-the- top video programming. With the advent of mobile technology, consumers have more touchpoints than ever. And the rapidly expanding mobile environment offers marketers and even broader swath of consumer insights, all of which combines to create a wealth of digital big data. The challenge, however, lies in sifting through the treasure chest of big data to glean smart and actionable insights that will drive business results.
       </p>
 
-      <div class="arrowWrap">
-        <ul class="arrows">
-        <!-- Customize by changing 
-        (1) ui-sref 
-        (2) ng-click="app.click_history.<appropriate link>" 
-        (3) class, and 
-        (4) id -->
-        
-        <!-- Page After Arrow -->
-          <li><a ui-sref="app.big_data" ng-click="app.click_history.big_data = 'true';" class="big_data_link" id="big_data_arrow"><i class="fa fa-play"></i></a></li>
-        </ul>
-      </div>
 
+    </div>
   </div>
 </div>
+
+<div class="arrowWrap">
+  <ul class="arrows">
+  <!-- Customize by changing 
+  (1) ui-sref 
+  (2) ng-click="app.click_history.<appropriate link>" 
+  (3) class, and 
+  (4) id -->
+  
+  <!-- Page After Arrow -->
+    <li><a ui-sref="app.big_data" class="rightArrow" ng-click="app.click_history.big_data_link = 'true';" class="big_data_link" id="big_data_arrow"><i class="fa fa-play"></i></a></li>
+  </ul>
+</div>
+
+

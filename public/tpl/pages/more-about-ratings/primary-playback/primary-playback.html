@@ -1,3 +1,43 @@
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+
+  // PAGE BEFORE
+
+  // jQuery for left-hand nav link
+  var ratings_questions_link = $(".navi ul.nav li#no-icon-page.ratings_questions_link");
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).ratings_questions_link=="true" ) {
+      ratings_questions_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav link gets a new class
+  $("a.leftArrow").on("click", function(){
+      ratings_questions_link.addClass("link-clicked");
+      console.log("left arrow added")
+    });
+
+
+
+  // PAGE AFTER
+
+  // jQuery for left-hand nav link
+  var our_hybrid_approach_link = $(".navi ul.nav li#no-icon-page.our_hybrid_approach_link")
+  // Ask localStorage if link has been clicked before
+  if ( JSON.parse(localStorage.getItem('ngStorage-click_history')).our_hybrid_approach_link=="true" ) {
+      our_hybrid_approach_link.addClass("link-clicked");
+    }
+  // On clicking arrow, the left-hand nav gets a new class
+    $("a.rightArrow").on("click", function(){
+      our_hybrid_approach_link.addClass("link-clicked");
+      console.log("right arrow added")
+    });
+});
+
+
+
+</script>
+
 
 <div class="hbox hbox-auto-xs hbox-auto-sm">
   
@@ -22,3 +62,10 @@
     </div>
   </div>
 </div>
+
+<div class="arrowWrap">
+        <ul class="arrows">
+          <li><a ui-sref="app.ratings_questions" class="leftArrow" ng-click="app.click_history.ratings_questions_link = 'true';" class="ratings_questions_link" id="ratings_questions_arrow"><i class="fa fa-play fa-rotate-180"></i></a></li>
+          <li><a ui-sref="app.our_hybrid_approach" class="rightArrow" ng-click="app.click_history.our_hybrid_approach_link = 'true';" class="our_hybrid_approach_link" id="our_hybrid_approach_arrow"><i class="fa fa-play"></i></a></li>
+        </ul>
+    </div>
