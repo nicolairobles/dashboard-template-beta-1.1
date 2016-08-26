@@ -17,7 +17,6 @@ const passport = require('passport'); // nodejs authentication
 const expressValidator = require('express-validator'); // sanitizer
 const sass = require('node-sass-middleware'); // recompile sass or scss
 const multer = require('multer'); // multipart form handling
-const consolidate = require('consolidate'); // allow 1+ template engines
 const upload = multer({ dest: path.join(__dirname, 'uploads') }); 
 
 /**

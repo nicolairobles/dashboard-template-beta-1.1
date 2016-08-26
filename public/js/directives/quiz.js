@@ -3,7 +3,7 @@ angular.module('app')
 		return {
 			restrict: 'AE',
 			scope: {},
-			templateUrl: '../../src/tpl/pages/introduction/intro-review/game.html',
+			templateUrl: '../../tpl/pages/introduction/intro-review/game.html',
 			link: function(scope, elem, attrs) {
 				scope.start = function() {
 					scope.id = 0;
